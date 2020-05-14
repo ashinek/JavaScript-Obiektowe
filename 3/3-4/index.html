@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<meta charset="utf-8">
+	<title>Page</title>
+</head>
+<body>	
+	<script>
+function fn(){
+    console.log(this.a);
+}
+
+var obj1 = {
+    a: 2,
+    fn: fn
+};
+
+var a = 99;
+var b = obj1.fn;
+b();
+obj1.fn();
+fn();
+
+fn();
+	</script>
+</body>
+</html>
